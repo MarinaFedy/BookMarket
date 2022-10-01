@@ -1,0 +1,56 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/project.css">
+        <script src="project.js"></script>
+        <title>Book</title>
+    </head>
+    <body>
+        <header>
+            <img src="img/logoB.png" alt="">                         
+            <div id="sort_menu">
+                <select id="sort_list">
+                    <option value="alphabet">По алфавиту А-Я </option>
+                    <option value="alphabet_reverse">По алфавиту Я-А </option>
+                    <option value="to_max_price">По цене (по возрастанию)</option>
+                    <option value="to_min_price">По цене (по убывынию)</option>
+                </select>                
+            </div>
+            <div class="search">
+                <input id="search_input" type="text" placeholder="Search">
+                <button id="search_b"><img src="img/search.png" alt=""></button>
+            </div>
+            <nav>
+                <a href="#add"><li>Новая карточка</li></a>
+                <li id="Bin">Корзина</li>
+            </nav>
+        </header>            
+
+        <div class="find_card"></div>
+        
+        <div class="main">
+            
+            <div class="card_part" id="card_part"></div>            
+            <div class="bin_part" id="bin_part">
+                <div class="inf">
+                    <h3>Всего товаров в корзине: </h3><h3 class="counter" id="counter">0</h3>
+                    <h3>Общая сумма:</h3><h3 id="sum">0</h3>
+                </div>
+                <div class="main_bin" id="main_bin"></div>
+            </div>
+            
+        </div>
+        <button id="add">Создать карточку</button>
+        <form id="new_card" onSubmit="return Complete();">
+            <label><h3>Название книги</h3><input type="text" name="name" id="f_name"/></label>
+            <label><h3>Автор</h3><input type="text" name="author" id="f_author"></label>
+            <label><h3>Цена</h3><input type="text" name="cost" id="f_cost"></label>
+            <label><h3>Скидка (если есть)</h3><input type="text" name="sale" id="f_sale"></label>
+            <label><h3>URL обложки</h3><input type="text" name="img" id="f_img"></label>
+            <button type="button" id="addCard">Создать карточку</button> <!-- requred работает только если type="submit"-->
+        </form>       
+    </body>
+    </html>
